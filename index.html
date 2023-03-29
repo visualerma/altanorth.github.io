@@ -40,7 +40,7 @@
         <a href="https://chat.whatsapp.com/CekUcpTCHLcG5kscsMkjQp">Graphic Design</a>
         <a href="https://chat.whatsapp.com/CekUcpTCHLcG5kscsMkjQp">Product Design</a>
         <a href="https://chat.whatsapp.com/CekUcpTCHLcG5kscsMkjQp">Fuffa Design</a>
-        <!-- nota personale, aggiungi corsi qui -->
+        <!-- Add more course links here -->
       </div>
     </div>
     <input type="text" placeholder="Cerca..." onkeyup="filterCourses()">
@@ -53,4 +53,16 @@
         input = document.querySelector('input[type="text"]');
         filter = input.value.toUpperCase();
         ul = document.querySelector('.dropdown-content');
-        a =
+        a = ul.getElementsByTagName('a');
+        for (i = 0; i < a.length; i++) {
+          if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+          } else {
+            a[i].style.display = "none";
+          }
+        }
+        document.getElementById("course-list").innerHTML = "Gruppi filtrati per corso: " + filter;
+      }
+    </script>
+  </body>
+</html>
