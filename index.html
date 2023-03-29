@@ -3,39 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>IED Matricole</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <style>
       /* Style for the dropdown menu */
       .dropdown {
         position: relative;
         display: inline-block;
+        font-family: 'Montserrat', sans-serif;
       }
 
       .dropdown-content {
         display: none;
         position: absolute;
         z-index: 1;
-        top: 100%;
-        left: 0;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        font-family: 'Montserrat', sans-serif;
       }
 
       .dropdown:hover .dropdown-content {
         display: block;
-      }
-
-      .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-      }
-
-      .dropdown-content a:hover {
-        background-color: #f1f1f1;
       }
 
       /* Style for the search box */
@@ -56,23 +40,25 @@
     <div class="dropdown">
       <button>Scegli un corso</button>
       <div class="dropdown-content">
-        <a href="https://chat.whatsapp.com/CekUcpTCHLcG5kscsMkjQp">Graphic Design</a>
-        <a href="https://chat.whatsapp.com/CekUcpTCHLcG5kscsMkjQp">Product Design</a>
-        <a href="https://chat.whatsapp.com/CekUcpTCHLcG5kscsMkjQp">Fuffa2 Design</a>
+        <a href="#">Graphic Design</a>
+        <a href="#">Product Design</a>
+        <a href="#">Fuffa Design</a>
         <!-- nota personale, aggiungi corsi qui -->
       </div>
     </div>
     <input type="text" placeholder="Cerca..." onkeyup="filterCourses()">
-    <p id="course-list">Gruppi filtrati per corso.</p>
+    <ul id="course-list"></ul>
 
     <script>
       // JavaScript code to filter courses based on user input
       function filterCourses() {
-        var input, filter, ul, a, i;
+        var input, filter, ul, li, a, i;
         input = document.querySelector('input[type="text"]');
         filter = input.value.toUpperCase();
         ul = document.querySelector('.dropdown-content');
         a = ul.getElementsByTagName('a');
+
+        // Loop through all list items, and hide those who don't match the search query
         for (i = 0; i < a.length; i++) {
           if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
             a[i].style.display = "";
@@ -80,6 +66,16 @@
             a[i].style.display = "none";
           }
         }
+
+        // Show filtered results in a separate list
+        var courses = document.querySelectorAll('.dropdown-content a[style=""]');
+        var courseList = document.querySelector('#course-list');
+        courseList.innerHTML = "";
+        courses.forEach(function(course) {
+          var li = document.createElement('li');
+          li.innerHTML = course.innerHTML;
+          courseList.appendChild(li);
+        });
       }
     </script>
   </body>
