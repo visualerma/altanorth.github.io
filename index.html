@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>IED Matricole</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <style>
       /* Style for the dropdown menu */
       .dropdown {
         position: relative;
         display: inline-block;
+        font-family: 'Montserrat', sans-serif;
       }
 
       .dropdown-content {
@@ -29,6 +31,7 @@
         box-sizing: border-box;
         margin-top: 10px;
         margin-bottom: 10px;
+        font-family: 'Montserrat', sans-serif;
       }
     </style>
   </head>
@@ -40,7 +43,7 @@
         <a href="https://chat.whatsapp.com/CekUcpTCHLcG5kscsMkjQp">Graphic Design</a>
         <a href="https://chat.whatsapp.com/CekUcpTCHLcG5kscsMkjQp">Product Design</a>
         <a href="https://chat.whatsapp.com/CekUcpTCHLcG5kscsMkjQp">Fuffa Design</a>
-        <!-- Add more course links here -->
+        <!-- nota personale, aggiungi corsi qui -->
       </div>
     </div>
     <input type="text" placeholder="Cerca..." onkeyup="filterCourses()">
@@ -56,12 +59,12 @@
         a = ul.getElementsByTagName('a');
         for (i = 0; i < a.length; i++) {
           if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
-            a[i].style.display = "";
+            a[i].style.display = '';
           } else {
-            a[i].style.display = "none";
+            a[i].style.display = 'none';
           }
         }
-        document.getElementById("course-list").innerHTML = "Gruppi filtrati per corso: " + filter;
+        document.getElementById('course-list').innerHTML = 'Gruppi filtrati per corso.';
       }
     </script>
   </body>
