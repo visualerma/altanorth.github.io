@@ -33,16 +33,24 @@
     </style>
   </head>
   <body>
-    <h1>IED Matricole</h1>
+    <h1>Gruppi</h1>
     <div class="dropdown">
       <button>Scegli un corso</button>
       <div class="dropdown-content">
-        <a href="https://chat.whatsapp.com/CekUcpTCHLcG5kscsMkjQp">Graphic Design</a>
-        <a href="https://chat.whatsapp.com/CekUcpTCHLcG5kscsMkjQp">Product Design</a>
-        <a href="https://chat.whatsapp.com/CekUcpTCHLcG5kscsMkjQp">Fashion Design</a>
+        <a href="#">Graphic Design</a>
+        <a href="#">Graphic Design</a>
+        <a href="#">Graphic Design</a>
+        <!-- nota personale, aggiungi corsi qui -->
       </div>
     </div>
-    <input type="Testo" placeholder="Cerca...">
-    <p>Filtra gruppi per corso.</p>
-  </body>
-</html>
+    <input type="text" placeholder="Cerca..." onkeyup="filterCourses()">
+    <p id="course-list">Gruppi filtrati per corso.</p>
+
+    <script>
+      // JavaScript code to filter courses based on user input
+      function filterCourses() {
+        var input, filter, ul, a, i;
+        input = document.querySelector('input[type="text"]');
+        filter = input.value.toUpperCase();
+        ul = document.querySelector('.dropdown-content');
+        a =
