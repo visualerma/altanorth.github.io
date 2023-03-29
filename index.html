@@ -5,78 +5,112 @@
     <title>IED Matricole</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <style>
-      /* Style for the dropdown menu */
-      .dropdown {
-        position: relative;
-        display: inline-block;
-        font-family: 'Montserrat', sans-serif;
-      }
-
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        z-index: 1;
-      }
-
-      .dropdown:hover .dropdown-content {
-        display: block;
-      }
-
-      /* Style for the search box */
-      input[type="text"] {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
+      * {
         box-sizing: border-box;
-        margin-top: 10px;
-        margin-bottom: 10px;
+      }
+      body {
+        margin: 0;
         font-family: 'Montserrat', sans-serif;
+      }
+      .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        background-color: #d20a11;
+        color: #fff;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 32px;
+      }
+      .search-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        background-color: #f2f2f2;
+      }
+      .search-box {
+        width: 500px;
+        height: 40px;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 16px;
+        outline: none;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      .search-box:focus {
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      }
+      .course-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 500px;
+        margin: 20px auto;
+      }
+      .course-list li {
+        padding: 10px;
+        font-size: 16px;
+        border-bottom: none;
+      }
+      .course-list li a {
+        text-decoration: none;
+        color: #333;
+      }
+      .course-list li a:hover {
+        color: #d20a11;
+        text-decoration: underline;
       }
     </style>
   </head>
   <body>
-    <h1>Gruppi</h1>
-    <div class="dropdown">
-      <button>Scegli un corso</button>
-      <div class="dropdown-content">
-        <a href="#">Graphic Design</a>
-        <a href="#">Product Design</a>
-        <a href="#">Fuffa5 Design</a>
-        <!-- nota personale, aggiungi corsi qui -->
-      </div>
+    <div class="header">
+      <h1>IED Milano - Gruppi Matricole</h1>
     </div>
-    <input type="text" placeholder="Cerca..." onkeyup="filterCourses()">
-    <ul id="course-list"></ul>
-
+    <div class="search-container">
+      <input type="text" class="search-box" placeholder="Cerca un corso...">
+    </div>
+    <ul class="course-list">
+      <li><a href="https://chat.whatsapp.com/CekUcpTCHLcG5kscsMkjQp">IT - Graphic Design</a></li>
+      <li><a href="https://chat.whatsapp.com/I1CYZ6AleEz9JDKCD5P3qV">IT - Fashion Design</a></li>
+      <li><a href="https://chat.whatsapp.com/FKIaUO1NgOd19RDqJsN8iK">IT - Interior Design</a></li>
+      <li><a href="https://chat.whatsapp.com/D6fWNMXAyW09RSAKyrCa8C">IT - Product Design</a></li>
+      <li><a href="https://chat.whatsapp.com/IXtt3W9RujHCslB3uU80yO">IT - Fashion Marketing</a></li>
+      <li><a href="https://chat.whatsapp.com/BOmk6mmNiRT3Ve3gwjLh1v">IT - Fotografia</a></li>
+      <li><a href="https://chat.whatsapp.com/DOg8VHEUhiALBMk1saoig0">IT - Sound Design</a></li>
+      <li><a href="https://chat.whatsapp.com/GOBsFkFAZdy5gaR4TZ8yxX">IT - Video Design</a></li>
+      <li><a href="https://chat.whatsapp.com/IwZkBk1EgPLLWQm8DhtKz7">IT - Media Design</a></li>
+      <li><a href="https://chat.whatsapp.com/DbDxqoK2gdJ6Q6P6C7WIgJ">IT - Design della Comunicazione</a></li>
+      <li><a href="https://chat.whatsapp.com/CESFbCbVhDmF1Ow5zqv5Vq">IT - Fashion Stylist & Communication</a></li>
+      <li><a href="https://chat.whatsapp.com/BD7jdtR6LUWImLw98WjO2R">IT - Illustrazione & Animazione</a></li>
+      <li><a href="https://chat.whatsapp.com/Jxw2P7efA0k62LG2l8R3W0">IT - CG Animation</a></li>
+      <li><a href="https://chat.whatsapp.com/BhahJfeP1BMDY6YoFEmyqs">EN - Product Design</a></li>
+      <li><a href="https://chat.whatsapp.com/F01Hq8wvtv24Oq2entd7ta">EN - Graphic Design</a></li>
+      <li><a href="https://chat.whatsapp.com/HwvluECrL75LAfXEFXKPHY">EN - Interior Design</a></li>
+      <li><a href="https://chat.whatsapp.com/B8sIob2diHwIW6Mb7qGxVz">EN - Fashion Design</a></li>
+      <li><a href="https://chat.whatsapp.com/BT0h7i6XNV85PhTJaL1kVE">EN - Fotografia</a></li>
+      <li><a href="https://chat.whatsapp.com/J4vAMCwgdhG4blmwBn9kgj">EN - Fashion Marketing</a></li>
+      <li><a href="https://chat.whatsapp.com/KQNLTeWlfKCKyqqdIiqO8n">EN - Fashion Stylist & Communication</a></li>
+    </ul>
     <script>
-      // JavaScript code to filter courses based on user input
-      function filterCourses() {
-        var input, filter, ul, li, a, i;
-        input = document.querySelector('input[type="text"]');
-        filter = input.value.toUpperCase();
-        ul = document.querySelector('.dropdown-content');
-        a = ul.getElementsByTagName('a');
+      const searchBox = document.querySelector('.search-box');
+      const courseList = document.querySelectorAll('.course-list li');
 
-        // Loop through all list items, and hide those who don't match the search query
-        for (i = 0; i < a.length; i++) {
-          if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
-            a[i].style.display = "";
+      searchBox.addEventListener('keyup', function(e) {
+        const searchTerm = e.target.value.toLowerCase();
+
+        courseList.forEach(function(course) {
+          const title = course.textContent.toLowerCase();
+
+          if (title.includes(searchTerm)) {
+            course.style.display = 'block';
           } else {
-            a[i].style.display = "none";
+            course.style.display = 'none';
           }
-        }
-
-        // Show filtered results in a separate list
-        var courses = document.querySelectorAll('.dropdown-content a[style=""]');
-        var courseList = document.querySelector('#course-list');
-        courseList.innerHTML = "";
-        courses.forEach(function(course) {
-          var li = document.createElement('li');
-          li.innerHTML = course.innerHTML;
-          courseList.appendChild(li);
         });
-      }
+      });
     </script>
-  </body>
-</html>
+ 
