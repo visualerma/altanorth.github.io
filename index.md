@@ -37,9 +37,9 @@
     <div class="dropdown">
       <button>Scegli un corso</button>
       <div class="dropdown-content">
-        <a href="#">Graphic Design</a>
-        <a href="#">Graphic Design</a>
-        <a href="#">Graphic Design</a>
+        <a href="https://chat.whatsapp.com/CekUcpTCHLcG5kscsMkjQp">Graphic Design</a>
+        <a href="https://chat.whatsapp.com/CekUcpTCHLcG5kscsMkjQp">Product Design</a>
+        <a href="https://chat.whatsapp.com/CekUcpTCHLcG5kscsMkjQp">Fuffa Design</a>
         <!-- nota personale, aggiungi corsi qui -->
       </div>
     </div>
