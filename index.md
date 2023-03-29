@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<title>IED Matricole</title>
@@ -34,7 +33,7 @@
 		</section>
 	</main>
 	<footer>
-		<p>&copy; IED Studenti Index, All rights reserved.</p>
+		<p>&copy; IED Studenti, All rights reserved.</p>
 	</footer>
 </body>
 </html>
